@@ -24,7 +24,15 @@ function setNav() {
 		console.log(isNext);
 		}
 
+		if (index == 0){
+			
+		 $("button.prev").addClass("disabled");	
+		}else if (index == (images.length-1)){
+			$(".button.next").addClass("disabled");
+			}else{ 
+				$("button").removeClass("disabled");
 		
+		}
 		updateImage();
 		
 		console.log("click!!");
@@ -51,6 +59,8 @@ $(document).ready(function() {
 		"<img src='images/"+images[index]+"'/>"
 		
 	);
+	
+	$(".button.prev").addClass("disabled");
 	
 	setNav();
 });
