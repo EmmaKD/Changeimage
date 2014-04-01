@@ -27,8 +27,16 @@ div{
 	border-style: solid;
 	float: left;
 	text-align: center;
+	cursor: pointer;
 }
 
+.disabled {
+	cursor: default;
+	border-color: gray;
+	color: gray;
+	
+	
+}
 .image-holder {
 	width: 600px;
 	height: 345px;
