@@ -13,17 +13,27 @@ function setNav() {
 	
 	$(".button.next").on("click", function() {
 		
+		index = index +1;
+		
+		updateImage();
+		
 		console.log("click!!");
 	});
 	
 	
 }
-
-
+/* change the image here */
+function updateImage(){
+$(".image-holder").html(
+		"<img src='images/"+images[index]+"'/>"
+		
+	);	
+	
+}
+/* load the first image into our image holder */
 $(document).ready(function() {
 	$(".image-holder").html(
 		"<img src='images/"+images[index]+"'/>"
-		
 		
 	);
 	
