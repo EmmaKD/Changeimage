@@ -8,6 +8,18 @@ var images=["drain_0m.png", "drain_1km.png", "drain_2km.png", "drain_3km.png", "
 
 var index = 0;
 
+function setNav() {
+	console.log("setNav")
+	
+	$(".button.next").on("click", function() {
+		
+		console.log("click!!");
+	});
+	
+	
+}
+
+
 $(document).ready(function() {
 	$(".image-holder").html(
 		"<img src='images/"+images[index]+"'/>"
@@ -15,7 +27,7 @@ $(document).ready(function() {
 		
 	);
 	
-	
+	setNav();
 });
 
 
