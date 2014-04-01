@@ -11,15 +11,30 @@ var index = 0;
 function setNav() {
 	console.log("setNav")
 	
-	$(".button.next").on("click", function() {
+	$(".button").on("click", function() {
 		
-		index = index +1;
+		var isNext = $(this).hasClass("next");
+		
+
+		if (isNext == true && index != (images.length-1)){
+			index = index +1;
+			
+			} else if (isNext == false && index > 0){ 
+				index = index -1;		
+		console.log(isNext);
+		}
+
 		
 		updateImage();
 		
 		console.log("click!!");
+		
+		
 	});
+
+
 	
+		
 	
 }
 /* change the image here */
